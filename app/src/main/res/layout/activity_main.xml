@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C0C0C0"
+    android:padding="18dp">
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/Input_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etQuestion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/Enter_your_Question_here"
+            android:textStyle="bold"
+            android:textColorHint="#666666"
+            android:textColor="#000000" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Input_layout"
+        android:layout_marginTop="32dp"
+        android:text="@string/button_Submit"
+        android:textColor="@color/black"
+        android:backgroundTint="#40E0D0"
+        android:textStyle="bold"
+        style="@style/Widget.MaterialComponents.Button.TextButton"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_Another"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/button_submit"
+        android:layout_below="@+id/Input_layout"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/button_Reset"
+        android:textColor="@color/black"
+        android:backgroundTint="#40E0D0"
+        android:textStyle="bold"
+        style="@style/Widget.MaterialComponents.Button.TextButton"/>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/shareButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/button_Another"
+        android:layout_below="@+id/Input_layout"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/button_Share"
+        android:textColor="@color/black"
+        android:backgroundTint="#40E0D0"
+        android:textStyle="bold"
+        style="@style/Widget.MaterialComponents.Button.TextButton"/>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/button_submit"
+        android:layout_marginBottom="24dp"
+        android:layout_marginTop="32dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtResponse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Your_result_will_be_displayed_here"
+                android:textColor="#000000"
+                android:padding="10sp"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
